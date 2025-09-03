@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav_bar {
+  display: flex;
+  align-items: center;
+  background: #111;
+  padding: 0 16px;
+  height: 56px;
+  position: relative;
+}
+
+
+.nav-toggle {
+  display: none;
+}
+
+
+.menu-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu-text {
+  font: 600 14px/1 system-ui, sans-serif;
+  letter-spacing: 0.08em;
+}
+
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.nav-menu {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: calc(100% + 10px); 
+  height: 56px;
+  align-items: center;
+  background: #222;
+  padding: 0 16px;
+  gap: 16px;
+
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s ease;
+  border-radius: 0 10px 10px 0;
+}
+
+.nav-menu li {
+  list-style: none;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px;
+  font: 500 14px/1 system-ui, sans-serif;
+}
+
+.nav-toggle:checked ~ .nav-menu {
+  transform: scaleX(1);
+}
+
+.nav-toggle:checked + .menu-btn .burger span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle:checked + .menu-btn .burger span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle:checked + .menu-btn .burger span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
