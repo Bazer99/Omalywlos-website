@@ -1,8 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-  background: #050301;
   box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #050301;
 }
 .nav-bar{
     width: 100%;
@@ -48,7 +53,7 @@
   background-color: #FFC000;
   transition: 0.5s;
 }
-.O-nas {
+#O-nas {
   display: flex;              
   justify-content: center;    
   align-items: center;        
@@ -74,6 +79,7 @@
     width: 200px;
     height: 50px;
     border: 1.5px solid #FFC000;
+    background-color: #050301;
     color: #F8FBF8;
     border-radius: 10px;
     font-size: 20px;
@@ -100,7 +106,7 @@
   border-radius: 20px;
 }
 
-.O-mnie{
+#O-mnie{
     width: 100%;
     height: 100vh;
     display: flex;
@@ -141,7 +147,7 @@
     font-size: 20px;
     line-height: 1.6;
 }
-.Cennik{
+#Cennik{
     width: 100%;
     height: 100vh;
     color: #F8FBF8;
@@ -178,7 +184,7 @@
     padding: 15px 30px;
     font-size: 25px;
 }
-.Prace{
+#Prace{
     width: 100%;
 }
 .Prace-header{
@@ -212,7 +218,7 @@
     height: auto;
     border-radius: 20px; 
 }
-.Mapa{
+#Mapa{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -238,6 +244,96 @@ iframe{
     border-radius: 20px;
     margin-top: 20px;
 }
-.Zarezerwuj{
+#Zarezerwuj{
     width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Zarezerwuj-h1{
+    padding-top: 50px;
+    font-size: 40px;
+    color: #FFC000;
+    font-family: Lobster, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+.Zarezerwuj-h3{
+    font-size: 20px;
+    color: #F8FBF8;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+.Zarezerwuj-i{
+    display: block;
+    color: #FFC000;
+    font-size: 40px;
+    margin: 30px auto;
+}
+.Zarezerwuj-btn{
+    margin-top: 50px;
+    width: 250px;
+    height: 60px;
+    border: 1.5px solid #FFC000;
+    background-color: #050301;
+    color: #F8FBF8;
+    border-radius: 10px;
+    font-size: 22px;
+    font-family: Lobster,sans-serif;
+    font-weight: 700;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+.Zarezerwuj-btn:hover{
+    background-color: #FFC000;
+    color: #050301;
+    transition: 0.5s;
+}
+.Zarezerwuj-extra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+.Zarezerwuj-p{
+    color: #F8FBF8;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+}
+.Extra-i{
+    color: #FFC000;
+    margin-right: 10px;
+}
+.Footer{
+    width: 100%;
+    height: 80px;
+    background-color: #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Footer-ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+
+}
+.footer-i{
+    color: #F8FBF8;
+    font-size: 30px;
+    cursor: pointer;
+}
+.footer-i:hover{
+    color: #FFC000;
+    transition: 0.3s;
+}
+.Footer-p{
+    color: #FFC000;
+    margin-left: 50px;
+    font-family: "Roboto", sans-serif;
 }
