@@ -16,13 +16,20 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+.nav-logo{
+    border-radius: 20px;
+    width: 70px;
+    height: 70px;
+    margin: 10px 0 0 20px;
+}
+/* ukryty checkbox */
 .menu-toggle {
   display: none;
 }
 
-/* Hamburger – trzy paski */
+/* hamburger – trzy paski */
 .hamburger {
-  display: none; /* na desktopie ukryte */
+  display: none; /* domyślnie na desktopie ukryte */
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
@@ -33,13 +40,6 @@ body{
   background-color: #F8FBF8;
   display: block;
   border-radius: 2px;
-}
-.nav-logo{
-    border-radius: 20px;
-    width: 70px;
-    height: 70px;
-    margin: 10px 0 0 20px;
-    
 }
 .nav-menu{
     display: flex;
@@ -355,123 +355,84 @@ iframe{
     margin-left: 50px;
     font-family: "Roboto", sans-serif;
 }
-/* Tablet */
-@media (max-width: 1024px) {
-  /* Navbar */
-  .nav-bar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 0;
-  }
-  .nav-menu {
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-  }
-  .nav-links a {
-    font-size: 20px;
-  }
-
-  /* Sekcje O-nas i O-mnie */
-  #O-nas, #O-mnie {
-    flex-direction: column;
-    text-align: center;
-    gap: 40px;
-    height: auto;
-    padding: 40px 20px;
-  }
-  .O-nas-left, .O-mnie-right, .O-mnie-left, .O-nas-right {
-    flex: unset;
-  }
-
-  /* Galeria */
-  .Prace-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Mapa */
-  iframe {
-    width: 90%;
-    height: 400px;
-  }
-
-  /* Zarezerwuj */
-  .Zarezerwuj-btn {
-    width: 200px;
-    height: 50px;
-    font-size: 18px;
-  }
-}
-/* Telefon */
 @media (max-width: 768px) {
-    .nav-logo{ display: none;}
-  /* Navbar */
-  .hamburger {
-    display: flex;
+  .nav-logo {
+    display: none; /* ukrywamy logo, jeśli chcesz */
   }
 
-  /* ukryj standardowe menu */
+  .hamburger {
+    display: flex; /* pokazujemy hamburgera */
+  }
+
   .nav-menu {
-    display: none;
+    display: none; /* domyślnie menu ukryte */
     flex-direction: column;
-    gap: 5px;
-    position: absolute;
-    top: 60px; /* poniżej nav */
-    right: 20px;
-    background-color: #111111;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
     padding: 10px 15px;
     border-radius: 10px;
+    position: relative;
+    gap: 6px;
   }
 
-  /* pokaż menu kiedy checkbox jest zaznaczony */
+  /* POKAŻ MENU kiedy checkbox zaznaczony */
   .menu-toggle:checked + .hamburger + .nav-menu {
     display: flex;
   }
-  .nav-menu {
-    gap: 5px;
-  }
+
+  /* linki w kolumnie */
   .nav-links a {
-    font-size: 18px;
+    font-size: 16px;
     padding: 5px 10px;
     display: block;
   }
-
-  /* Sekcje O-nas i O-mnie */
-  #O-nas, #O-mnie {
-    padding: 20px 10px;
-    gap: 20px;
-  }
-  .O-nas-h1, .O-mnie-h1 {
-    font-size: 32px;
-  }
-  .O-nas-btn, .Zarezerwuj-btn {
-    width: 180px;
-    font-size: 16px;
-  }
-
-  /* Galeria */
-  .Prace-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  /* Mapa */
-  iframe {
-    width: 100%;
-    height: 300px;
-  }
-
-  /* Zarezerwuj extra */
-  .Zarezerwuj-extra {
+  #O-nas {
     flex-direction: column;
-    gap: 20px;
+    text-align: center;
+    height: auto;
+    gap: 40px;
   }
-
-  /* Footer */
-  .Footer-ul {
-    flex-direction: column;
-    gap: 15px;
+  .O-nas-btn{
+    margin: auto;
   }
+  #O-mnie{
+    flex-direction: column-reverse;
+    height: auto;
+    margin: auto;
+    gap: 40px;
+  }
+    .O-mnie-right{
+        margin: 30px auto 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+    iframe {
+  width: 100%;
+  min-height: 400px; /* lub auto, ale lepiej ustawić min wysokość */
+  border: none;
+  border-radius: 20px;
 }
+.Zarezerwuj-extra{
+    flex-direction: column;
+    gap: 20px;
+}
+.Footer{
+    flex-direction: column-reverse;
+    height: auto;
+    padding: 15px 0;
+}
+.Footer-p{
+    margin: 0 auto;
+}
+.Footer-ul{
+    margin-top: 20px;
+}
+}
+/* Ogarnac zeby menu nie zlewalo contentu */
+/* Poprawic rozdzielczosci nagłówków */
+/* Ustawic Ikone (i) na srodku */
 
-/* Ogarnac responsywnosc dla telefonu( hamburber menu,zwikeszyc odleglosci, pozostac przy ukladzie left right przy dwoch sekcjach oraz naprawic footer) jezeli nie to usunac hamburger z html!!! */
+/* Responsywnosc dla tabletu  */
+
 
