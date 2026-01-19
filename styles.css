@@ -356,79 +356,122 @@ iframe{
     font-family: "Roboto", sans-serif;
 }
 @media (max-width: 768px) {
-  .nav-logo {
-    display: none; /* ukrywamy logo, jeśli chcesz */
-  }
 
-  .hamburger {
-    display: flex; /* pokazujemy hamburgera */
-  }
-
-  .nav-menu {
-    display: none; /* domyślnie menu ukryte */
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    padding: 10px 15px;
-    border-radius: 10px;
-    position: relative;
-    gap: 6px;
-  }
-
-  /* POKAŻ MENU kiedy checkbox zaznaczony */
-  .menu-toggle:checked + .hamburger + .nav-menu {
-    display: flex;
-  }
-
-  /* linki w kolumnie */
-  .nav-links a {
-    font-size: 16px;
-    padding: 5px 10px;
+  /* Nav-bar w kolumnie */
+  .nav-bar {
     display: block;
+    height: auto;
+    width: 100%;
+    position: relative;
   }
+
+  /* Ukrywamy logo jeśli chcemy */
+  .nav-logo {
+    display: none;
+  }
+
+  /* Hamburger */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    padding: 10px 20px;
+  }
+  .hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #F8FBF8;
+    border-radius: 2px;
+  }
+
+  /* Menu ukryte na start */
+  .nav-menu {
+    height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    transition: height 0.3s ease;
+    width: 100%;
+    padding: 0 20px;
+    background-color: #050301;
+    border-radius: 10px;
+  }
+
+  /* Po kliknięciu hamburgera rozwinięcie menu */
+  .menu-toggle:checked + .hamburger + .nav-menu {
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  /* Linki w kolumnie */
+  .nav-links {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .nav-links a {
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+  }
+
+  /* Sekcja O-nas */
   #O-nas {
     flex-direction: column;
     text-align: center;
     height: auto;
     gap: 40px;
   }
-  .O-nas-btn{
+  .O-nas-btn {
     margin: auto;
   }
-  #O-mnie{
+
+  /* Sekcja O-mnie */
+  #O-mnie {
     flex-direction: column-reverse;
     height: auto;
-    margin: auto;
     gap: 40px;
+    margin: auto;
   }
-    .O-mnie-right{
-        margin: 30px auto 0 auto;
-        padding: 20px;
-        text-align: center;
-    }
-    iframe {
-  width: 100%;
-  min-height: 400px; /* lub auto, ale lepiej ustawić min wysokość */
-  border: none;
-  border-radius: 20px;
-}
-.Zarezerwuj-extra{
+  .O-mnie-right {
+    margin: 30px auto 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Video i iframe */
+  iframe, .O-mnie-video {
+    width: 100%;
+    min-height: 400px;
+    border-radius: 20px;
+  }
+
+  /* Zarezerwuj ekstra */
+  .Zarezerwuj-extra {
     flex-direction: column;
     gap: 20px;
-}
-.Footer{
+  }
+
+  /* Footer w kolumnie */
+  .Footer {
     flex-direction: column-reverse;
     height: auto;
     padding: 15px 0;
-}
-.Footer-p{
-    margin: 0 auto;
-}
-.Footer-ul{
+    text-align: center;
+  }
+  .Footer-p {
+    margin: 10px auto 0 auto;
+  }
+  .Footer-ul {
     margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 }
-}
+
+
 /* Ogarnac zeby menu nie zlewalo contentu */
 /* Poprawic rozdzielczosci nagłówków */
 /* Ustawic Ikone (i) na srodku */
