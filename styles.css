@@ -415,6 +415,17 @@ iframe{
     display: block;
     padding: 10px 0;
   }
+  .i-scissors{
+    margin: 0 auto;
+  }
+  .O-nas-h1,
+  .O-mnie-h1,
+  .Cennik-h1,
+  .Prace-h1,
+  .Mapa-h1,
+  .Zarezerwuj-h1 {
+    font-size: 35px;
+  }
 
   /* Sekcja O-nas */
   #O-nas {
@@ -471,10 +482,7 @@ iframe{
   }
 }
 
-/* Poprawic rozdzielczosci nagłówków */
-/* Ustawic Ikone (i) na srodku */
 /* Zmienic font  */
-/* Naprawic filmik tel */
 
 /* Responsywnosc dla tabletu  */
 
