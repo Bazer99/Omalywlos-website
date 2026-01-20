@@ -481,9 +481,36 @@ iframe{
     gap: 15px;
   }
 }
-
-/* Zmienic font  */
-
-/* Responsywnosc dla tabletu  */
+@media (max-width:1024px){
+    #O-nas{
+        margin-top: 30px;
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        gap: 40px;
+    }
+    .O-nas-btn{
+        margin: auto;
+    }
+    #O-mnie{
+        flex-direction: column-reverse;
+        height: auto;
+        gap: 40px;
+        margin: 150px auto 0 auto;
+        text-align: center;
+        padding: 0 30px;
+    }
+    .i-scissors{
+        margin: 0 auto;
+    }
+    .O-nas-h1,
+  .O-mnie-h1,
+  .Cennik-h1,
+  .Prace-h1,
+  .Mapa-h1,
+  .Zarezerwuj-h1 {
+    font-size: 35px;
+  }
+}
 
 
